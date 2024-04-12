@@ -1,7 +1,8 @@
-void nullCheck(dynamic a) => a == null ? print("Null Bang") : print(a);
+dynamic nullCheck(dynamic a) => a ?? "";
 
 void main(){
-  nullCheck(1);
-  nullCheck("Maul");
-  nullCheck(null);
+  int? age;
+  print(nullCheck(1));
+  print(nullCheck(null));
+  print(nullCheck("Maul"));
 }

@@ -1,1 +1,5 @@
-A sample command-line application providing basic argument parsing with an entrypoint in `bin/`.
+# Basic Dart
+
+Hello iam trying to learn dart start from basic
+
+hope everything allright

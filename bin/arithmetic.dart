@@ -18,6 +18,10 @@ void bagiSisa(int a, int b){
   print(a % b);
 }
 
+void increment(int a){
+  print(a++);
+}
+
 void main(){
   const a = 12;
   const b = 13;

@@ -1,5 +1,6 @@
 const name = "Maulana";
 var age = 12;
+final isSameWithConst = 12;
 
 String fullName = "";
 int brithYear = 2999;
@@ -12,4 +13,6 @@ void main(){
   print(age);
 
   print(fullName);
+
+  print(isSameWithConst);
 }

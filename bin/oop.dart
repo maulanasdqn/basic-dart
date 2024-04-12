@@ -1,45 +1,43 @@
 class Human {
-  String? name;
-  int? age;
 
-  getName<String>(){
-    return name;
-  }
+  static String? name;
+  static int? age;
 
-  getAge(){
-    return age;
-  }
+  getName() => name ?? "name not set";
 
-  setAge(int newAge){
-    age = newAge;
-  }
+  getAge() => age ?? "age not set";
 
-  setName(String newName){
-    name = newName;
-  }
+  setAge(int newAge) => age = newAge;
 
-  sayHello(){
-    return "Hello my name is $name";
-  }
+  setName(String newName) => name = newName;
+
+  sayHello() => name != null ? "Hello my name is $name" : "name not set";
 
   checkAge(){
-    if (age == null) return "age not set";
+    if (age == null) return "i don't know your age";
 
     if (age! > 20){
-      return "is huge";
+      return "adult";
+    } else {
+      return "toddler";
     }
+
   }
+
+}
+
+extension SuperHuman on Human {
+  increaseAge(int newAge) => Human.age = newAge;
 }
 
 void main(){
-  var yanto = Human();
-
+  final yanto = Human();
   yanto.setName("yanto ganjar");
-
-  print(yanto.getName());
-
   print(yanto.sayHello());
-
   print(yanto.checkAge());
 
+  yanto.increaseAge(56);
+
+
+  print(yanto.checkAge());
 }
